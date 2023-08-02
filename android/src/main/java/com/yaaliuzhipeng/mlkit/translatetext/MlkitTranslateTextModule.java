@@ -138,7 +138,7 @@ public class MlkitTranslateTextModule extends ReactContextBaseJavaModule {
         TranslateRemoteModel lm = new TranslateRemoteModel
                 .Builder(lang)
                 .build();
-        modelManager.download(lm, new DownloadConditions.Builder().requireWifi().build())
+        modelManager.download(lm, new DownloadConditions.Builder().build())
                 .addOnSuccessListener(v -> {
                     successCallback.invoke("success");
                 })
